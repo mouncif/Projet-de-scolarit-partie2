@@ -4,4 +4,6 @@ export interface Module {
   idfiliere: number;
   Chargehoraire: number;
   idprof: string;
+  anneValidation: string;
+  session: string;
 }

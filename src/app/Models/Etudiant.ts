@@ -1,6 +1,7 @@
 export interface Etudiant {
   nom: string ;
   apogee: number;
+  cin: string;
   prenom: string;
   datenaissance: string;
   ville: string;
@@ -10,6 +11,6 @@ export interface Etudiant {
   password: string;
   image: string;
   email: string;
-  semestre: string;
+  semestre: number[];
   noteModule: any;
 }
