@@ -1,0 +1,20 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened class="example-sidenav">
+    <img mat-card-image src="../../../assets/img/logoFP2.png" class="logo-wrapper" alt="FPBM">
+    <button mat-raised-button class="mat-button" *ngFor="let item of list;" routerLink="{{item.link}}" >{{item.name}}</button>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar>
+      <mat-label>FPBM | Scolarity</mat-label>
+      <span class="fill-space"></span>
+      <button mat-raised-button class="user" *ngIf="currentUser"  [matMenuTriggerFor]="Options" >{{currentUser.nom }} {{currentUser.prenom}}
+      </button>
+      <mat-menu #Options="matMenu">
+        <button mat-menu-item >Profile</button>
+        <button mat-menu-item (click)="onLogout()" >LogOut</button>
+      </mat-menu>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+    <!--<app-footer></app-footer>-->
+  </mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Bienvenue cher(e) {{data.cin}}</h1>
+<div mat-dialog-content>
+  <p>Veillez entrer votre nouveau mot de passe !</p>
+  <mat-form-field>
+    <mat-label>mot de passe</mat-label>
+    <input matInput type="password" [(ngModel)]="password">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Confirme mot de passe</mat-label>
+    <input matInput type="password" (keyup)="checkData()" [(ngModel)]="confpassword">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button class="mat-accent"   [disabled]="isDisabled" cdkFocusInitial [mat-dialog-close]="password" >valider</button>
+  <button mat-button (click)="onNoClick()">annuler</button>
+</div>

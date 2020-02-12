@@ -1,4 +1,5 @@
 export interface Etudiant {
+  id: number;
   nom: string ;
   apogee: number;
   cin: string;

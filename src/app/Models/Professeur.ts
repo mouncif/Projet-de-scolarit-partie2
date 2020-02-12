@@ -5,4 +5,6 @@ export interface Professeur {
   module: string[];
   password: string;
   email: string;
+  datenaissance: string;
+  siValide: boolean;
 }

@@ -4,4 +4,5 @@ export interface Avis {
   corp: string;
   title: string;
   date: string;
+  valider: boolean;
 }

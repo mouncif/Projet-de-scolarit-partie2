@@ -1,0 +1,56 @@
+{
+  "Etudiant": [
+    {
+      "id": 1,
+      "nom": "houssam",
+      "apogee": 123456,
+      "cin": "cd2345",
+      "prenom": "houssam",
+      "datenaissance": "12/12/1997",
+      "ville": "fes",
+      "idFiliere": 1,
+      "Tel": "0654247221",
+      "siValide": true,
+      "password": "1010",
+      "image": "",
+      "email": "houssam.abioui@gmail.com",
+      "semestre": [],
+      "noteModule": ""
+    }
+  ],
+  "Professeur": [
+    {
+      "id": 1,
+      "nom": "prof",
+      "prenom": "abioui",
+      "cin": "cd1234",
+      "datenaissance": "11/11/1996",
+      "module": [],
+      "email": "prof@usms.ac.ma",
+      "siValide": true,
+      "password": "1212"
+    }
+  ],
+  "Operateur": [
+    {
+      "id": 1,
+      "nom": "Opertaeur",
+      "prenom": "abioui",
+      "password": "admin",
+      "cin": "cd3456",
+      "datenaissance": "10/10/1998",
+      "siValide": null
+    }
+  ],
+  "Admin": [
+    {
+      "id": 1,
+      "nom": "admin",
+      "prenom": "abioui",
+      "password": "admin",
+      "cin": "cd3456",
+      "datenaissance": "10/10/1998",
+      "siValide": null
+    }
+  ]
+}
