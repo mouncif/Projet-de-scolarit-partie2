@@ -7,7 +7,7 @@ import { NavigationComponent } from './navigation.component';
 import {
   MatButtonModule,
   MatCheckboxModule,
-  MatFormFieldModule, MatMenuModule,
+  MatFormFieldModule, MatIconModule, MatMenuModule,
   MatSelectModule,
   MatSidenavModule,
   MatToolbarModule
@@ -28,6 +28,7 @@ import {FooterComponent} from '../footer/footer.component';
     MatButtonModule,
     MatSelectModule,
     MatMenuModule,
+    MatIconModule,
   ],
   declarations: [
     NavigationComponent,

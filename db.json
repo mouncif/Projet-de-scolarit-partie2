@@ -21,8 +21,8 @@
   "Professeur": [
     {
       "id": 1,
-      "nom": "prof",
-      "prenom": "abioui",
+      "nom": "Amayoune",
+      "prenom": "Anass",
       "cin": "cd1234",
       "datenaissance": "11/11/1996",
       "module": [],
@@ -52,5 +52,122 @@
       "datenaissance": "10/10/1998",
       "siValide": null
     }
+  ],
+  "avis": [
+    {
+      "id": 1,
+      "idprof": 1,
+      "title": "Examen",
+      "corp": "Examen le 11 fevirier matière: Oracle",
+      "date": "2020/02/12"
+    }
+  ],
+  "module": [
+    {"id": 1, "titre": "Hydrogen","idfiliere": 1,  "session": "H" , "Chargehoraire" : 50},
+    {"id": 2, "titre": "Hydrogen","idfiliere": 1,  "session": "H'" ,"Chargehoraire" : 40}
+  ],
+  "classe": [
+    {
+      "id": 1,
+      "label": "Fintone",
+      "capacite": 55
+    },
+    {
+      "id": 2,
+      "label": "Opela",
+      "capacite": 96
+    },
+    {
+      "id": 3,
+      "label": "Bigtax",
+      "capacite": 57
+    },
+    {
+      "id": 4,
+      "label": "Tres-Zap",
+      "capacite": 96
+    },
+    {
+      "id": 5,
+      "label": "Bamity",
+      "capacite": 70
+    },
+    {
+      "id": 6,
+      "label": "Treeflex",
+      "capacite": 70
+    },
+    {
+      "id": 7,
+      "label": "Greenlam",
+      "capacite": 67
+    },
+    {
+      "id": 8,
+      "label": "Tampflex",
+      "capacite": 76
+    },
+    {
+      "id": 9,
+      "label": "Keylex",
+      "capacite": 100
+    },
+    {
+      "id": 10,
+      "label": "It",
+      "capacite": 52
+    },
+    {
+      "id": 11,
+      "label": "Biodex",
+      "capacite": 51
+    },
+    {
+      "id": 12,
+      "label": "Domainer",
+      "capacite": 58
+    },
+    {
+      "id": 13,
+      "label": "Trippledex",
+      "capacite": 50
+    },
+    {
+      "id": 14,
+      "label": "Trippledex",
+      "capacite": 86
+    },
+    {
+      "id": 15,
+      "label": "Vagram",
+      "capacite": 97
+    },
+    {
+      "id": 16,
+      "label": "Treeflex",
+      "capacite": 85
+    },
+    {
+      "id": 17,
+      "label": "Y-Solowarm",
+      "capacite": 66
+    },
+    {
+      "id": 18,
+      "label": "Latlux",
+      "capacite": 93
+    },
+    {
+      "id": 19,
+      "label": "Bitchip",
+      "capacite": 88
+    },
+    {
+      "id": 20,
+      "label": "Prodder",
+      "capacite": 74
+    }
+  ],
+  "exam": [
   ]
 }

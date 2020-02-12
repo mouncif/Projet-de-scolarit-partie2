@@ -5,13 +5,13 @@
   </mat-drawer>
   <mat-drawer-content>
     <mat-toolbar>
-      <mat-label>FPBM | Scolarity</mat-label>
+      <mat-label>FPBM | Scolarité</mat-label>
       <span class="fill-space"></span>
       <button mat-raised-button class="user" *ngIf="currentUser"  [matMenuTriggerFor]="Options" >{{currentUser.nom }} {{currentUser.prenom}}
       </button>
       <mat-menu #Options="matMenu">
-        <button mat-menu-item >Profile</button>
-        <button mat-menu-item (click)="onLogout()" >LogOut</button>
+        <button mat-menu-item ><mat-icon>account_circle</mat-icon>Profile</button>
+        <button mat-menu-item (click)="onLogout()" ><mat-icon>logout</mat-icon> Déconnecter</button>
       </mat-menu>
     </mat-toolbar>
     <router-outlet></router-outlet>

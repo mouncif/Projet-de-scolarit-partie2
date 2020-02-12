@@ -13,11 +13,13 @@ import {Etudiant} from '../../Models/Etudiant';
 export class NavigationComponent {
   currentUser: any;
   activation: string;
+  navdata: any;
   // tslint:disable-next-line:max-line-length
   constructor(private router: Router, private authenticationService: AuthService) {
     this.authenticationService.currentEtudiant.subscribe(x => this.currentUser = x);
     this.authenticationService.currentProf.subscribe(x => this.currentUser = x);
     this.authenticationService.activation.subscribe(x => this.activation = x);
+    this.authenticationService.navbardata.subscribe(x => this.navdata = x);
   }
 
   showFiller = false;
@@ -25,7 +27,7 @@ export class NavigationComponent {
   // tslint:disable-next-line:use-lifecycle-interface
   ngOnInit() {
     // tslint:disable-next-line:max-line-length
-    this.list = [{id : 1, name : 'Accueil', link : '/accueil'}, /*{ id : 2, name : 'Profile', link : '/login'},*/ {id : 3, name : 'Activer mon compte', link : '/activation'}, {id : 4, name : 'A Propos', link : '/aboutus'} ];
+    this.list = this.navdata;
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
