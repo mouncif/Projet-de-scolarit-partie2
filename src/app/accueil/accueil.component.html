@@ -1,0 +1,12 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Choisir votre compte</mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <mat-card-actions class="actions">
+      <button  mat-raised-button color="accent" (click)="onProfClick()" class="btn-rights" [routerLink]="['/login/prof']">Professeur</button>
+      <button  mat-raised-button color=""  (click)="onEtudiantClick()" class="btn-rights blue-gradient" [routerLink]="['/login']">Etudiant</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

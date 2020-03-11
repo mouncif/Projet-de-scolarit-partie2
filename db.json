@@ -10,8 +10,8 @@
       "ville": "fes",
       "idFiliere": 1,
       "Tel": "0654247221",
-      "siValide": true,
-      "password": "1010",
+      "siValide": false,
+      "password": "",
       "image": "",
       "email": "houssam.abioui@gmail.com",
       "semestre": [],
@@ -27,8 +27,19 @@
       "datenaissance": "11/11/1996",
       "module": [],
       "email": "prof@usms.ac.ma",
-      "siValide": true,
+      "siValide": false,
       "password": "1212"
+    },
+    {
+      "id": 2,
+      "nom": "abioui",
+      "prenom": "houssam",
+      "cin": "cd3456",
+      "datenaissance": "12/12/1997",
+      "module": [],
+      "email": "prof@usms.ac.ma",
+      "siValide": true,
+      "password": "0101"
     }
   ],
   "Operateur": [
@@ -60,11 +71,37 @@
       "title": "Examen",
       "corp": "Examen le 11 fevirier matière: Oracle",
       "date": "2020/02/12"
+    },
+    {
+      "id": 2,
+      "idprof": 1,
+      "corp": "de notre ",
+      "title": "Steve jobs",
+      "date": "2020/02/13"
+    },
+    {
+      "id": 3,
+      "idprof": 1,
+      "corp": "test",
+      "title": "titre1",
+      "date": "2020/03/06"
     }
   ],
   "module": [
-    {"id": 1, "titre": "Hydrogen","idfiliere": 1,  "session": "H" , "Chargehoraire" : 50},
-    {"id": 2, "titre": "Hydrogen","idfiliere": 1,  "session": "H'" ,"Chargehoraire" : 40}
+    {
+      "id": 1,
+      "titre": "Front End",
+      "idfiliere": 1,
+      "session": "normal",
+      "Chargehoraire": 50
+    },
+    {
+      "id": 2,
+      "titre": "Back End",
+      "idfiliere": 1,
+      "session": "normal",
+      "Chargehoraire": 40
+    }
   ],
   "classe": [
     {
@@ -168,6 +205,5 @@
       "capacite": 74
     }
   ],
-  "exam": [
-  ]
+  "exam": []
 }

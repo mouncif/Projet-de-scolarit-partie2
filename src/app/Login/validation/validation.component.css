@@ -1,0 +1,16 @@
+.example-card{
+  width: 60%;
+  margin: 10% 20% 10% 20%;
+}
+.example-full-width{
+  width: 90%;
+  margin: 0% 5% 0% 5%;
+}
+.btn-right{
+  justify-content: flex-end !important ;
+  align-items: flex-end !important;
+
+}
+.example-full-width{
+  margin-top: 1.2%;
+}

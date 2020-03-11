@@ -1,0 +1,12 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Choisir votre compte</mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <mat-card-actions class="actionsT">
+      <button  mat-raised-button color="warn" (click)="onAdminClick()" class="btn-rights" [routerLink]="['/scolarity/admin/login']">Administrateur</button>
+      <button  mat-raised-button color=""  (click)="onOperateurClick()" class="btn-rights blue-gradient" [routerLink]="['/scolarity/login']">Opérateur</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

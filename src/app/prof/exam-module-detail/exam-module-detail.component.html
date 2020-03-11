@@ -1,0 +1,65 @@
+<mat-toolbar>
+        <span class="example-fill-remaining-space">
+                Nouveau Examen
+
+        </span>
+</mat-toolbar>
+
+<mat-card>
+        <mat-grid-list cols="2" rowHeight="50px">
+          <mat-grid-tile><i>Module : </i>  {{ module?.titre}}</mat-grid-tile>
+          <mat-grid-tile><i>Filiere : </i> {{ module?.idfiliere}}</mat-grid-tile>
+          <mat-grid-tile [colspan]="2" ><i>Nombre d'etudiants : </i> {{ RemainingStudents}} / {{getStudentCount()}}</mat-grid-tile>
+        </mat-grid-list>
+
+
+</mat-card>
+<div class="example-fill-remaining-space" style="height:20px"> </div>
+<mat-card>
+  <span><b>date et horraire d'examen :</b></span>
+    <mat-divider style="margin-top:10px"></mat-divider>
+
+    <form class="example-fill-remaining-space" style="margin-top: 10px;">
+            <mat-form-field  style="margin: 10px;width: 25%" class="example-full-width">
+                    <mat-label>Date</mat-label>
+
+
+                    <input matInput [min]="minDate" [matDatepicker]="picker">
+
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+
+    <mat-form-field   style="margin: 10px;width: 25%" class="example-full-width">
+            <mat-label>heure debut</mat-label>
+            <input matInput placeholder="Temp debut" matInput  value="ngModel" type="time" >
+    </mat-form-field>
+
+    <mat-form-field style="margin: 10px;width: 25%"  class="example-full-width">
+            <mat-label>heure fin</mat-label>
+            <input matInput placeholder="Temp debut"  type="time" >
+    </mat-form-field>
+
+    <button mat-stroked-button style="margin: 10px;width: 10%" (click)="searchClasses()"><mat-icon>search</mat-icon></button>
+
+
+</form>
+
+</mat-card>
+
+<div class="example-fill-remaining-space" style="height:20px"> </div>
+<mat-card>
+  <mat-label><b>Classes disponibles :
+  </b></mat-label>
+<mat-divider style="margin-top:10px"></mat-divider>
+<mat-selection-list #dispClasses  (click)="updateSelectClassView(dispClasses)">
+        <mat-list-option *ngFor="let classe of dispClasse">
+          {{classe.label}} : ({{classe.capacite}} etudiants)
+        </mat-list-option>
+      </mat-selection-list>
+
+  <mat-divider></mat-divider>
+      <div class="example-fill-remaining-space"></div>
+      <button mat-flat-button  color="accent" style="margin: 10px;width: 10%"><mat-icon>save</mat-icon></button>
+</mat-card>

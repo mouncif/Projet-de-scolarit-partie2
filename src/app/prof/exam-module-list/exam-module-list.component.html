@@ -1,0 +1,52 @@
+<mat-toolbar>
+<span class="example-fill-remaining-space">
+        Examen > liste des Modules
+</span>
+</mat-toolbar>
+
+
+<mat-form-field>
+    <mat-label>Chercher un Module</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex: Front End">
+  </mat-form-field>
+
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="titre">
+      <th mat-header-cell *matHeaderCellDef> Titre </th>
+      <td mat-cell *matCellDef="let element"> {{element.titre}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Chargehoraire">
+      <th mat-header-cell *matHeaderCellDef> Chargehoraire </th>
+      <td mat-cell *matCellDef="let element"> {{element.Chargehoraire}} Hr</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="idfiliere">
+      <th mat-header-cell *matHeaderCellDef> identifiant filiere </th>
+      <td mat-cell *matCellDef="let element"> {{element.idfiliere}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="session">
+      <th mat-header-cell *matHeaderCellDef> session </th>
+      <td mat-cell *matCellDef="let element"> {{element.session}} </td>
+    </ng-container>
+
+    <!-- Symbol action -->
+    <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> action </th>
+        <td mat-cell *matCellDef="let element">
+          <button color="accent" mat-raised-button (click)="selectModule(element)"><mat-icon>done</mat-icon></button>
+
+        </td>
+      </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

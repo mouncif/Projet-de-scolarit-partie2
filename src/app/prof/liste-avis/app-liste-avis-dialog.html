@@ -1,0 +1,31 @@
+<h4 style="text-align: center">Nouveau Avis</h4>
+<mat-divider  style="margin:20px 0px 20px 0px"></mat-divider>
+
+<!--id: new FormControl(null),
+    idprof: new FormControl('1'),
+    corp: new FormControl('', Validators.required),
+    title: new FormControl('', Validators.required),
+    date: new FormControl(new Date()),-->
+<form  [formGroup]="service.avisForm"  (ngSubmit)="addAvis()" style="width: 100%">
+
+        <mat-form-field  class="example-full-width" >
+                <mat-label>Titre</mat-label>
+                <input matInput  formControlName="title">
+              </mat-form-field>
+              <mat-error *ngIf="service.avisForm.controls['title'].errors?.required">Ce Champ est requis.
+        </mat-error>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Corp</mat-label>
+                <input matInput name="corp" formControlName="corp"/>
+
+        </mat-form-field>
+        <mat-error *ngIf="service.avisForm.controls['corp'].errors?.required">Ce Champ est requis.
+        </mat-error>
+
+        <mat-divider  style="margin:20px 0px 20px 0px"></mat-divider>
+        <div>
+                <button mat-button  (click)="closeAvis()">Annuler</button>
+                <button mat-raised-button type="submit" color="accent" >Ajouter</button>
+        </div>
+</form>
